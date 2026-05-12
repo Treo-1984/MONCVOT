@@ -1,0 +1,16 @@
+{
+  "name": "moncvot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch SCSS:CSS"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "sass": "^1.99.0"
+  }
+}
