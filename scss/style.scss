@@ -37,7 +37,7 @@ header {
 
   @include media-queries.xs {
     padding: 5rem 2rem;
-    // max-width: 100vh;
+    max-width: 100vh;
   }
 
   h1 {
@@ -221,6 +221,9 @@ footer {
   background: var(--text);
   color: white;
   padding: 5rem;
+  @include media-queries.xs {
+    padding: 5rem 3rem;
+  }
 
   h2 {
     margin-bottom: 3rem;
@@ -267,6 +270,9 @@ footer {
       min-width: 400px;
       padding: 1rem 2rem;
       line-height: 2rem;
+      @include media-queries.xs {
+        min-width: 200px;
+      }
       &::placeholder {
         color: var(--text);
       }
