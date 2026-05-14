@@ -2,6 +2,7 @@
 @use "reset";
 @use "classes";
 @use "utils";
+@use "media-queries";
 
 .grid-container {
   display: grid;
@@ -11,6 +12,16 @@
     "aside main" 1fr
     "footer footer" auto
     / 350px auto;
+
+  @include media-queries.xs {
+    grid:
+      "header" auto
+      "main" auto
+      "picture" auto
+      "aside" auto
+      "footer" auto
+      / auto;
+  }
 }
 
 header {
@@ -24,11 +35,20 @@ header {
   align-items: center;
   justify-content: center;
 
+  @include media-queries.xs {
+    padding: 5rem 2rem;
+    // max-width: 100vh;
+  }
+
   h1 {
     font-size: 3rem;
     line-height: 3rem;
     font-weight: 400;
     letter-spacing: 2rem;
+    @include media-queries.xs {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
   }
 
   p {
@@ -151,6 +171,10 @@ main {
   padding: 5rem;
   text-align: justify;
 
+  @include media-queries.xs {
+    padding: 5rem 3rem;
+  }
+
   h2 {
     margin-bottom: 5rem;
   }
@@ -174,6 +198,9 @@ main {
 
   .content {
     padding: 0rem 1rem;
+    @include media-queries.xs {
+      padding: 0rem 0rem;
+    }
 
     h2 {
       margin-top: 0;

@@ -63,6 +63,11 @@ body {
   min-height: 100vh;
   grid: "picture header" auto "aside main" 1fr "footer footer" auto/350px auto;
 }
+@media (max-width: 480px) {
+  .grid-container {
+    grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto/auto;
+  }
+}
 
 header {
   grid-area: header;
@@ -75,11 +80,22 @@ header {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 480px) {
+  header {
+    padding: 5rem 2rem;
+  }
+}
 header h1 {
   font-size: 3rem;
   line-height: 3rem;
   font-weight: 400;
   letter-spacing: 2rem;
+}
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
 }
 header p {
   letter-spacing: 0.5rem;
@@ -195,6 +211,11 @@ main {
   padding: 5rem;
   text-align: justify;
 }
+@media (max-width: 480px) {
+  main {
+    padding: 5rem 3rem;
+  }
+}
 main h2 {
   margin-bottom: 5rem;
 }
@@ -217,6 +238,11 @@ main p {
 }
 .experience .content {
   padding: 0rem 1rem;
+}
+@media (max-width: 480px) {
+  .experience .content {
+    padding: 0rem 0rem;
+  }
 }
 .experience .content h2 {
   margin-top: 0;
